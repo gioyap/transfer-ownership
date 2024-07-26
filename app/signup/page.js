@@ -57,12 +57,12 @@ const Signup = () => {
               className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
             />
           </div>
-          <button 
-            type="submit" 
+          <a 
+            href='/'
             className="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
           >
             Sign Up
-          </button>
+          </a>
         </form>
         {message && <p className="mt-4">{message}</p>}
       </div>
