@@ -10,16 +10,16 @@ export default function Home() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // First, send the ownership transfer request
-    const transferRes = await fetch('/api/transfer', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ to, fileId }),
-    });
+    // // First, send the ownership transfer request
+    // const transferRes = await fetch('/api/transfer', {
+    //   method: 'POST',
+    //   headers: {
+    //     'Content-Type': 'application/json',
+    //   },
+    //   body: JSON.stringify({ to, fileId }),
+    // });
 
-    const transferResult = await transferRes.text();
+    // const transferResult = await transferRes.text();
 
     // Then, send the email notification
     const emailRes = await fetch('/api/sendEmail', {
@@ -31,7 +31,7 @@ export default function Home() {
     });
 
     const emailResult = await emailRes.text();
-    setMessage(`Transfer Result: ${transferResult}, Email Result: ${emailResult}`);
+    setMessage(`Email Result: ${emailResult}`);
   };
 
   return (
