@@ -1,6 +1,6 @@
 // app/api/transfer/route.js
 
-import { connectToDatabase } from '../../../utils/mongodb'; // Adjust the path if necessary
+import { connectToDatabase } from '../../../lib/mongodb'; // Adjust the path if necessary
 import File from '../../../models/File'; // Adjust the path if necessary
 
 export async function POST(req) {
